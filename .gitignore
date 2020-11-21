@@ -1,0 +1,13 @@
+*.pyc
+**/__pycache__
+.idea/
+.idea_modules/
+*.csv
+*.parquet
+*.pkl
+*.tar.gz
+.idea
+.gradle
+gradle
+gradlew
+*.bat
