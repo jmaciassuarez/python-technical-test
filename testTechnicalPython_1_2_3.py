@@ -7,6 +7,7 @@ class Persona:
         self.nombre = nombre
         self.edad = edad
     def presentation(self):
+        # print(f"Hola! Soy {self.nombre} y tengo {self.edad} años")
         return f"Hola! Soy {self.nombre} y tengo {self.edad} años"
 
     def __str__(self):
@@ -20,7 +21,7 @@ class Trabajador(Persona):
         self.puesto = puesto
 
     def presentation(self):
-        print(Persona.presentation(self),f"pertenezco al departamento: {self.departamento} y mi puesto es {self.puesto}")
+        print(super().presentation(),f"pertenezco al departamento: {self.departamento} y mi puesto es {self.puesto}")
 
     def __str__(self):
         return f"{Persona.__str__(self)} pertenezco al departamento: {self.departamento} y mi puesto es {self.puesto}"
@@ -41,14 +42,15 @@ trabajador_1.presentation()
 print("Opción 2: ")
 print(trabajador_1)
 
+
 """ APARTADO 3) 
 
-la diferencia entre self.nombre y la variable llamada nombre, en la función
-    def __init__(self, nombre, edad):
-        self.nombre = nombre
-        self.edad = edad
-
-Nombre es la variable que entra como parámetro a la función y self.nombre es el atributo para la clase Persona.
+La diferencia entre self.nombre y la variable llamada nombre, en la función:
+                                                                                def __init__(self, nombre, edad):
+                                                                                    self.nombre = nombre
+                                                                                    self.edad = edad
+                                                                                         
+nombre es la variable que pasa como parámetro en la función y self.nombre es el atributo para la clase Persona.
 
 """
 
